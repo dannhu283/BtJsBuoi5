@@ -1,0 +1,97 @@
+* {
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+}
+.tab-pane summary {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+.tab-pane details li {
+  line-height: 27px;
+  margin-bottom: 8px;
+}
+.card {
+  border: 0 solid white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: #ecf0f3;
+  color: #a0a5a8;
+}
+.bg_card {
+  background-image: url(../img/corner-4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: 0 8px 8px 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.bt_tab {
+  background: #ecf0f3;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  color: #31344b;
+}
+.bt_feature {
+  background-color: #4b70e2;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  outline: 0;
+  padding: 12px 45px;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.bt_feature:focus,
+.bt_feature:hover {
+  background-color: #4b70e2 !important;
+  color: white !important;
+  transform: scale(0.97);
+}
+.nav-tabs {
+  padding: 20px;
+  background-color: #ecf0f3;
+  box-shadow: 4px 4px 10px #d1d9e6, -4px -4px 10px #f9f9f9;
+  padding: 20px;
+}
+
+.bt_tab::before {
+  content: "📕";
+}
+.bt_tab.active::before {
+  content: "📖";
+}
+.form_ip {
+  padding: 10px 15px;
+  background-color: #ecf0f3;
+  border: none;
+  border-radius: 8px;
+  outline: 0;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  transition: 0.3s ease;
+}
+.form_ip:focus {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.note:first-child {
+  border-left-color: rgba(255, 166, 0, 0.801);
+}
+.note {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e9ecef;
+  border-left-width: 0.25rem;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: #31344b;
+  box-shadow: -3px -3px 7px #fff, 3px 3px 5px #ceced1;
+  border-left-color: rgba(0, 162, 255, 0.938);
+}
