@@ -1,4 +1,28 @@
 //nhớ mở public github
+// bài tập 1
+function admissionsManager() {
+  //tạo biến và dom lấy giá trị khu vực,đối tượng và điểm
+  let area = +document.getElementById("selectArea").value;
+  let object = +document.getElementById("selectObject").value;
+  let mark = +document.getElementById("point").value;
+  let point1 = +document.getElementById("point1").value;
+  let point2 = +document.getElementById("point2").value;
+  let point3 = +document.getElementById("point3").value;
+  let total = area + object + point1 + point2 + point3;
+  if (point1 <= 0 || point2 <= 0 || point3 <= 0) {
+    document.getElementById(
+      "result"
+    ).innerHTML = ` Bạn đã rớt do có điểm nhỏ hơn hoặc bằng 0`;
+  } else if (total < mark) {
+    document.getElementById(
+      "result"
+    ).innerHTML = `Bạn đã rớt.  Tổng điểm: ${total}`;
+  } else {
+    document.getElementById(
+      "result"
+    ).innerHTML = ` Bạn đã đậu.  Tổng điểm: ${total}`;
+  }
+}
 // bài tập 2
 //tạo hàm để gắn sự kiện onclick
 function electricBill() {
@@ -34,9 +58,11 @@ function pay(kw, price1, price2, price3, price4, price5) {
 }
 function display(price) {
   //dom đến id lấy giá trị của tên đển gắn vào innerHTML
-  let name = document.getElementById("fullName").value;
+  let fullName = document.getElementById("fullName").value;
   document.getElementById("divBill").style.display = "block";
   document.getElementById(
     "electricBill"
-  ).innerHTML = ` Họ tên : ${name} ; Tiền điện : ${price.toLocaleString()} `;
+  ).innerHTML = ` Họ tên : ${fullName} ; Tiền điện : ${price.toLocaleString()} `;
 }
+
+//bài tập 3

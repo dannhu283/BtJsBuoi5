@@ -85,7 +85,7 @@
                                         placeholder="Điểm chuẩn">
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <select class="form-control form_ip" name="">
+                                    <select class="form-control form_ip" id="selectArea">
                                         <option value="0">Chọn khu vực</option>
                                         <option value="2">A</option>
                                         <option value="1">B</option>
@@ -93,7 +93,7 @@
                                     </select>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <select class="form-control form_ip" name="">
+                                    <select class="form-control form_ip" id="selectObject">
                                         <option value="0">Chọn đối tượng</option>
                                         <option value="2.5">1</option>
                                         <option value="1.5">2</option>
@@ -101,23 +101,23 @@
                                     </select>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form_ip" id="point1"
+                                    <input type="number" class="form-control form_ip" id="point1" 
                                         placeholder="Điểm môn thứ 1">
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form_ip" id="point2"
+                                    <input type="number" class="form-control form_ip" id="point2" 
                                         placeholder="Điểm môn thứ 2 ">
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form_ip" id="point3"
+                                    <input type="number" class="form-control form_ip" id="point3" 
                                         placeholder="Điểm môn thứ 3">
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn bt_feature me-1 mb-1" type="button" >Kết quả</button>
+                                    <button class="btn bt_feature me-1 mb-1" type="button" onclick="admissionsManager()" >Kết quả</button>
                                 </div>
                                 <div class="alert alert-success" role="alert">
                                    <span class="fs-5">👉</span>
-                                    <span ></span>
+                                    <span id="result" ></span>
                                 </div>
                             </form>
                         </div>
@@ -228,7 +228,7 @@
                                 </div>
                                 <div class="alert alert-success d-flex" role="alert">
                                  <span class="fs-5">👉</span>
-                                  <div class="d-flex " id="titleCal">
+                                  <div class="d-flex " id="">
                                   </div>
                                 </div>
                             </form>
