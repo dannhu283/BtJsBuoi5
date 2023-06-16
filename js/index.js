@@ -23,6 +23,8 @@ function admissionsManager() {
     ).innerHTML = ` Bạn đã đậu.  Tổng điểm: ${total}`;
   }
 }
+
+//-----------------------------------------------------------------------------------
 // bài tập 2
 //tạo hàm để gắn sự kiện onclick
 function electricBill() {
@@ -64,5 +66,45 @@ function display(price) {
     "electricBill"
   ).innerHTML = ` Họ tên : ${fullName} ; Tiền điện : ${price.toLocaleString()} `;
 }
-
+//-----------------------------------------------------------------------------------
 //bài tập 3
+function taxes() {
+  //dom lấy giá trị để tính thuế
+  let name = document.getElementById("name").value;
+  let income = document.getElementById("income").value;
+  let dependent = document.getElementById("dependent").value;
+  //đầu tiên tính tiền chịu thuê theo công thức
+  let incomeTaxes = income - 4e6 - dependent * 16e5;
+  let moneyPaid = 0;
+  if (incomeTaxes <= 6e7) {
+    moneyPaid = incomeTaxes * 0.05;
+  } else if (incomeTaxes <= 12e7) {
+    moneyPaid = incomeTaxes * 0.1;
+  } else if (incomeTaxes <= 21e7) {
+    moneyPaid = incomeTaxes * 0.15;
+  } else if (incomeTaxes <= 384e6) {
+    moneyPaid = incomeTaxes * 0.2;
+  } else if (incomeTaxes <= 624e6) {
+    moneyPaid = incomeTaxes * 0.25;
+  } else if (incomeTaxes <= 96e7) {
+    moneyPaid = incomeTaxes * 0.3;
+  } else {
+    moneyPaid = incomeTaxes * 0.35;
+  }
+  if (moneyPaid < 0) {
+    alert("Số tiền thu nhập không hợp lệ");
+    document.getElementById(
+      "oPut"
+    ).innerHTML = `Tên : ${name} -- Tiền thuế thu nhập cá nhân : 0 VND`;
+  } else {
+    document.getElementById(
+      "oPut"
+    ).innerHTML = `Tên : ${name} -- Tiền thuế thu nhập cá nhân : ${moneyPaid.toLocaleString(
+      "en-US",
+      {
+        style: "currency",
+        currency: "VND",
+      }
+    )}`;
+  }
+}
