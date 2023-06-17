@@ -120,3 +120,28 @@ function onChange() {
     document.getElementById("hidden").style.display = "none";
   }
 }
+function paidCable() {
+  let oC = document.getElementById("select").value;
+  let paid = 0;
+  let code = document.getElementById("code").value;
+  let premiumChannel = document.getElementById("premiumChannel").value;
+  let hidden = document.getElementById("hidden").value;
+  if (oC == "2") {
+    if (hidden <= 10) {
+      paid = 15 + 75 + premiumChannel * 50;
+    } else {
+      paid = 15 + 75 + (hidden - 10) * 5 + 50;
+    }
+  } else {
+    paid = 4.5 + 20.5 + premiumChannel * 7.5;
+  }
+  document.getElementById(
+    "paidCable"
+  ).innerHTML = ` Mã khách hàng : ${code} -- Tiền cáp: ${paid.toLocaleString(
+    "US-en",
+    {
+      style: "currency",
+      currency: "USD",
+    }
+  )}`;
+}
