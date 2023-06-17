@@ -108,3 +108,15 @@ function taxes() {
     )}`;
   }
 }
+//-----------------------------------------------------------------------------------
+//bài tập 4
+//hàm hiển hiển thị ô số kết nối khi user chọn đối tượng Kh doanh nghiệp
+function onChange() {
+  let oC = document.getElementById("select").value;
+  console.log(oC);
+  if (oC == "2") {
+    document.getElementById("hidden").style.display = "block";
+  } else {
+    document.getElementById("hidden").style.display = "none";
+  }
+}

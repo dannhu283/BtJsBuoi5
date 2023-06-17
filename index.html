@@ -190,7 +190,7 @@
                                 </div>
                             </form>
                         </div>
-                        <!-- bài tậ p4  -->
+                        <!-- bài tập 4  -->
                         <div class="tab-pane py-4 fade" id="bai4" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                             <h4 > <span class="fs-2 ms-3">🕸️</span>Tính tiền cáp</h4>
                             <div class="note callout callout-info ms-3">
@@ -209,19 +209,23 @@
                             </div>
                             <form class="row gy-3 align-items-center px-2">
                                 <div class="col-12 col-lg-4">
-                                 <select  id="select" class="form-control form_ip">
+                                 <select  id="select" class="form-control form_ip" onclick="onChange()" >
                                     <option value="">Chọn loại khách hàng</option>
-                                    <option value="user">Nhà Dân</option>
-                                    <option value="business">Doanh Nghiệp</option>
+                                    <option value="1">Nhà Dân</option>
+                                    <option value="2">Doanh Nghiệp</option>
                                  </select>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <input type="text" class="form-control form_ip"
+                                    <input type="text" class="form-control form_ip" id="code"
                                         placeholder="Nhập mã khách hàng">
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form_ip"
-                                        placeholder="Số Kênh Cao Cấp">
+                                    <input type="number" class="form-control form_ip" id="premiumChannel"
+                                        placeholder="Số Kênh Cao Cấp"> 
+                                </div>
+                                <div class="col-12 col-lg-4" >
+                                    <input type="number" id="hidden" class="form-control form_ip"
+                                        placeholder="Số kết nối">
                                 </div>
                                 <div class="col-12">
                                     <button class="btn bt_feature me-1 mb-1" type="button" >Tính Tiền Cáp</button>
