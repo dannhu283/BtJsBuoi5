@@ -112,6 +112,7 @@ function taxes() {
 //bài tập 4
 //hàm hiển hiển thị ô số kết nối khi user chọn đối tượng Kh doanh nghiệp
 function onChange() {
+  //lấy giá trị của select để ẩn hiện input
   let oC = document.getElementById("select").value;
   console.log(oC);
   if (oC == "2") {
@@ -121,11 +122,13 @@ function onChange() {
   }
 }
 function paidCable() {
+  //dom tới các giá trị để tính toán
   let oC = document.getElementById("select").value;
   let paid = 0;
   let code = document.getElementById("code").value;
   let premiumChannel = document.getElementById("premiumChannel").value;
   let hidden = document.getElementById("hidden").value;
+  //tính tiền cáp theo công thức
   if (oC == "2") {
     if (hidden <= 10) {
       paid = 15 + 75 + premiumChannel * 50;
