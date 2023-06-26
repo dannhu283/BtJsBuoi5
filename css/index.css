@@ -95,3 +95,11 @@
   box-shadow: -3px -3px 7px #fff, 3px 3px 5px #ceced1;
   border-left-color: rgba(0, 162, 255, 0.938);
 }
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
